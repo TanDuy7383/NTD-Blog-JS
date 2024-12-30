@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Giới Thiệu\rTrong Java, kiểu dữ liệu rất quan trọng vì chúng xác định loại dữ liệu mà một biến có thể chứa và các thao tác có thể thực hiện trên dữ liệu đó. Java có các kiểu dữ liệu nguyên thủy và kiểu dữ liệu đối tượng. Trong bài viết này, chúng ta sẽ tìm hiểu về các kiểu dữ liệu cơ bản trong Java và cách sử dụng chúng.\n">
+<title>Bài Viết 2: Các Kiểu Dữ Liệu Trong Java</title>
+
+<link rel='canonical' href='https://example.org/posts/bai-viet-2/'>
+
+<link rel="stylesheet" href="/scss/style.min.6722a184819edd61aaa405bf80a440320700fc796f1bfb31619805b390121542.css"><meta property='og:title' content="Bài Viết 2: Các Kiểu Dữ Liệu Trong Java">
+<meta property='og:description' content="Giới Thiệu\rTrong Java, kiểu dữ liệu rất quan trọng vì chúng xác định loại dữ liệu mà một biến có thể chứa và các thao tác có thể thực hiện trên dữ liệu đó. Java có các kiểu dữ liệu nguyên thủy và kiểu dữ liệu đối tượng. Trong bài viết này, chúng ta sẽ tìm hiểu về các kiểu dữ liệu cơ bản trong Java và cách sử dụng chúng.\n">
+<meta property='og:url' content='https://example.org/posts/bai-viet-2/'>
+<meta property='og:site_name' content='Duy&#39;s JS Insight'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Java' /><meta property='article:published_time' content='2024-11-30T00:00:00&#43;07:00'/><meta property='article:modified_time' content='2024-11-30T00:00:00&#43;07:00'/>
+<meta name="twitter:title" content="Bài Viết 2: Các Kiểu Dữ Liệu Trong Java">
+<meta name="twitter:description" content="Giới Thiệu\rTrong Java, kiểu dữ liệu rất quan trọng vì chúng xác định loại dữ liệu mà một biến có thể chứa và các thao tác có thể thực hiện trên dữ liệu đó. Java có các kiểu dữ liệu nguyên thủy và kiểu dữ liệu đối tượng. Trong bài viết này, chúng ta sẽ tìm hiểu về các kiểu dữ liệu cơ bản trong Java và cách sử dụng chúng.\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu15243428473294347562.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Duy&#39;s JS Insight</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/bai-viet-2/">Bài Viết 2: Các Kiểu Dữ Liệu Trong Java</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Nov 30, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="giới-thiệu">Giới Thiệu
+</h2><p>Trong Java, kiểu dữ liệu rất quan trọng vì chúng xác định loại dữ liệu mà một biến có thể chứa và các thao tác có thể thực hiện trên dữ liệu đó. Java có các kiểu dữ liệu nguyên thủy và kiểu dữ liệu đối tượng. Trong bài viết này, chúng ta sẽ tìm hiểu về các kiểu dữ liệu cơ bản trong Java và cách sử dụng chúng.</p>
+<h2 id="các-kiểu-dữ-liệu-nguyên-thủy">Các Kiểu Dữ Liệu Nguyên Thủy
+</h2><ol>
+<li>
+<p><strong>Số Nguyên (Integer):</strong></p>
+<ul>
+<li>Các kiểu dữ liệu số nguyên bao gồm: <code>byte</code>, <code>short</code>, <code>int</code>, <code>long</code>.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">byte</span> smallNumber <span style="color:#f92672">=</span> 12;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">short</span> mediumNumber <span style="color:#f92672">=</span> 32000;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> number <span style="color:#f92672">=</span> 1000000;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">long</span> largeNumber <span style="color:#f92672">=</span> 10000000000L;
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Số Thực (Floating-Point):</strong></p>
+<ul>
+<li>Các kiểu dữ liệu số thực bao gồm: <code>float</code>, <code>double</code>.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">float</span> pi <span style="color:#f92672">=</span> 3.<span style="color:#a6e22e">14f</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">double</span> bigPi <span style="color:#f92672">=</span> 3.<span style="color:#a6e22e">141592653589793</span>;
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Kiểu Logic (Boolean):</strong></p>
+<ul>
+<li>Kiểu dữ liệu boolean chỉ có hai giá trị: <code>true</code> và <code>false</code>.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> isJavaFun <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> isFishTasty <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Ký Tự (Character):</strong></p>
+<ul>
+<li>Kiểu dữ liệu char lưu trữ một ký tự đơn và sử dụng mã Unicode.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> letterA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;A&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">char</span> letterB <span style="color:#f92672">=</span> 66; <span style="color:#75715e">// Mã Unicode cho chữ &#39;B&#39;</span>
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="các-kiểu-dữ-liệu-đối-tượng">Các Kiểu Dữ Liệu Đối Tượng
+</h2><ol>
+<li>
+<p><strong>Chuỗi (String):</strong></p>
+<ul>
+<li>Kiểu dữ liệu chuỗi lưu trữ các chuỗi ký tự.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String greeting <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello, World!&#34;</span>;
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Mảng (Array):</strong></p>
+<ul>
+<li>Kiểu dữ liệu mảng lưu trữ một tập hợp các giá trị có cùng kiểu dữ liệu.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> numbers <span style="color:#f92672">=</span> {1, 2, 3, 4, 5};
+</span></span><span style="display:flex;"><span>String<span style="color:#f92672">[]</span> fruits <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;Apple&#34;</span>, <span style="color:#e6db74">&#34;Banana&#34;</span>, <span style="color:#e6db74">&#34;Cherry&#34;</span>};
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Đối Tượng (Object):</strong></p>
+<ul>
+<li>Kiểu dữ liệu đối tượng là các thực thể có thuộc tính và phương thức.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> {
+</span></span><span style="display:flex;"><span>    String name;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> age;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Person(String name, <span style="color:#66d9ef">int</span> age) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> age;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">display</span>() {
+</span></span><span style="display:flex;"><span>        System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Name: &#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, Age: &#34;</span> <span style="color:#f92672">+</span> age);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Main</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        Person person <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person(<span style="color:#e6db74">&#34;John&#34;</span>, 30);
+</span></span><span style="display:flex;"><span>        person.<span style="color:#a6e22e">display</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="ví-dụ-sử-dụng-các-kiểu-dữ-liệu">Ví Dụ Sử Dụng Các Kiểu Dữ Liệu
+</h2><ol>
+<li><strong>Tính Toán Với Số Nguyên:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 10;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> 20;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> sum <span style="color:#f92672">=</span> a <span style="color:#f92672">+</span> b;
+</span></span><span style="display:flex;"><span>System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Sum: &#34;</span> <span style="color:#f92672">+</span> sum);
+</span></span></code></pre></div></li>
+<li><strong>Xử Lý Chuỗi:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> String firstName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span> String lastName <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Doe&#34;</span>;
+</span></span><span style="display:flex;"><span> String fullName <span style="color:#f92672">=</span> firstName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span> <span style="color:#f92672">+</span> lastName;
+</span></span><span style="display:flex;"><span> System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Full Name: &#34;</span> <span style="color:#f92672">+</span> fullName);
+</span></span></code></pre></div></li>
+<li><strong>Làm Việc Với Mảng:</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> scores <span style="color:#f92672">=</span> {85, 90, 78, 92, 88};
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> score : scores) {
+</span></span><span style="display:flex;"><span>     System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Score: &#34;</span> <span style="color:#f92672">+</span> score);
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div></li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java/">Java</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/bai-viet-3/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài Viết 3: Lập Trình Hướng Đối Tượng Trong Java</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/bai-viet-4/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài Viết 4: Xử Lý Ngoại Lệ Trong Java</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/bai-viet-5/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài Viết 5: Lập Trình Đa Luồng Trong Java</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/bai-viet-6/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài Viết 6: Xử Lý File Trong Java</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/bai-viet-7/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài Viết 7: Làm Việc Với Cơ Sở Dữ Liệu Trong Java</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 Duy&#39;s JS Insight
+    </section>
+    
+    <section class="powerby">
+        </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

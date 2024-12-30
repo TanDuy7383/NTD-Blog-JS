@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Giới Thiệu\rLập trình giao diện người dùng (GUI) là một phần quan trọng trong phát triển ứng dụng giúp tương tác giữa người dùng và chương trình trở nên trực quan hơn. Trong Java, thư viện Swing cung cấp một bộ công cụ mạnh mẽ để tạo giao diện người dùng. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng Swing để tạo các thành phần giao diện cơ bản.\n">
+<title>Bài Viết 8: Lập Trình Giao Diện Người Dùng Trong Java</title>
+
+<link rel='canonical' href='https://example.org/posts/bai-viet-8/'>
+
+<link rel="stylesheet" href="/scss/style.min.6722a184819edd61aaa405bf80a440320700fc796f1bfb31619805b390121542.css"><meta property='og:title' content="Bài Viết 8: Lập Trình Giao Diện Người Dùng Trong Java">
+<meta property='og:description' content="Giới Thiệu\rLập trình giao diện người dùng (GUI) là một phần quan trọng trong phát triển ứng dụng giúp tương tác giữa người dùng và chương trình trở nên trực quan hơn. Trong Java, thư viện Swing cung cấp một bộ công cụ mạnh mẽ để tạo giao diện người dùng. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng Swing để tạo các thành phần giao diện cơ bản.\n">
+<meta property='og:url' content='https://example.org/posts/bai-viet-8/'>
+<meta property='og:site_name' content='Duy&#39;s JS Insight'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='GUI' /><meta property='article:tag' content='Swing' /><meta property='article:published_time' content='2024-01-02T00:00:00&#43;07:00'/><meta property='article:modified_time' content='2024-01-02T00:00:00&#43;07:00'/>
+<meta name="twitter:title" content="Bài Viết 8: Lập Trình Giao Diện Người Dùng Trong Java">
+<meta name="twitter:description" content="Giới Thiệu\rLập trình giao diện người dùng (GUI) là một phần quan trọng trong phát triển ứng dụng giúp tương tác giữa người dùng và chương trình trở nên trực quan hơn. Trong Java, thư viện Swing cung cấp một bộ công cụ mạnh mẽ để tạo giao diện người dùng. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng Swing để tạo các thành phần giao diện cơ bản.\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu15243428473294347562.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Duy&#39;s JS Insight</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/bai-viet-8/">Bài Viết 8: Lập Trình Giao Diện Người Dùng Trong Java</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 02, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="giới-thiệu">Giới Thiệu
+</h2><p>Lập trình giao diện người dùng (GUI) là một phần quan trọng trong phát triển ứng dụng giúp tương tác giữa người dùng và chương trình trở nên trực quan hơn. Trong Java, thư viện Swing cung cấp một bộ công cụ mạnh mẽ để tạo giao diện người dùng. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng Swing để tạo các thành phần giao diện cơ bản.</p>
+<h2 id="tạo-cửa-sổ-đơn-giản">Tạo Cửa Sổ Đơn Giản
+</h2><ol>
+<li><strong>Cấu Trúc Cơ Bản:</strong>
+<ul>
+<li>Để tạo một cửa sổ đơn giản, bạn cần sử dụng lớp <code>JFrame</code> từ thư viện Swing.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JFrame;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SimpleWindow</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        JFrame frame <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JFrame(<span style="color:#e6db74">&#34;Simple Window&#34;</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setSize</span>(400, 300);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setDefaultCloseOperation</span>(JFrame.<span style="color:#a6e22e">EXIT_ON_CLOSE</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setVisible</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="thêm-các-thành-phần-giao-diện">Thêm Các Thành Phần Giao Diện
+</h2><ol>
+<li>
+<p><strong>Nút Bấm (Button):</strong></p>
+<ul>
+<li>Bạn có thể thêm nút bấm vào cửa sổ bằng cách sử dụng lớp <code>JButton</code>.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JButton;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JFrame;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ButtonExample</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        JFrame frame <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JFrame(<span style="color:#e6db74">&#34;Button Example&#34;</span>);
+</span></span><span style="display:flex;"><span>        JButton button <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JButton(<span style="color:#e6db74">&#34;Click Me&#34;</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">add</span>(button);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setSize</span>(400, 300);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setDefaultCloseOperation</span>(JFrame.<span style="color:#a6e22e">EXIT_ON_CLOSE</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setVisible</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Nhãn (Label):</strong></p>
+<ul>
+<li>Bạn có thể thêm nhãn vào cửa sổ bằng cách sử dụng lớp <code>JLabel</code>.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JFrame;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JLabel;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LabelExample</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        JFrame frame <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JFrame(<span style="color:#e6db74">&#34;Label Example&#34;</span>);
+</span></span><span style="display:flex;"><span>        JLabel label <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JLabel(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">add</span>(label);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setSize</span>(400, 300);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setDefaultCloseOperation</span>(JFrame.<span style="color:#a6e22e">EXIT_ON_CLOSE</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setVisible</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Trường Văn Bản (Text Field):</strong></p>
+<ul>
+<li>Bạn có thể thêm trường văn bản vào cửa sổ bằng cách sử dụng lớp <code>JTextField</code>.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JFrame;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JTextField;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TextFieldExample</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        JFrame frame <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JFrame(<span style="color:#e6db74">&#34;TextField Example&#34;</span>);
+</span></span><span style="display:flex;"><span>        JTextField textField <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JTextField(<span style="color:#e6db74">&#34;Enter text here&#34;</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">add</span>(textField);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setSize</span>(400, 300);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setDefaultCloseOperation</span>(JFrame.<span style="color:#a6e22e">EXIT_ON_CLOSE</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setVisible</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="xử-lý-sự-kiện">Xử Lý Sự Kiện
+</h2><ol>
+<li><strong>Xử Lý Sự Kiện Nhấn Nút:</strong>
+<ul>
+<li>Để xử lý sự kiện nhấn nút, bạn cần sử dụng giao diện <code>ActionListener</code>.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JButton;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JFrame;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JOptionPane;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.awt.event.ActionEvent;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.awt.event.ActionListener;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ButtonEventExample</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        JFrame frame <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JFrame(<span style="color:#e6db74">&#34;Button Event Example&#34;</span>);
+</span></span><span style="display:flex;"><span>        JButton button <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JButton(<span style="color:#e6db74">&#34;Click Me&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        button.<span style="color:#a6e22e">addActionListener</span>(<span style="color:#66d9ef">new</span> ActionListener() {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">actionPerformed</span>(ActionEvent e) {
+</span></span><span style="display:flex;"><span>                JOptionPane.<span style="color:#a6e22e">showMessageDialog</span>(frame, <span style="color:#e6db74">&#34;Button clicked!&#34;</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">add</span>(button);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setSize</span>(400, 300);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setDefaultCloseOperation</span>(JFrame.<span style="color:#a6e22e">EXIT_ON_CLOSE</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setVisible</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="bố-cục-giao-diện-layout">Bố Cục Giao Diện (Layout)
+</h2><ol>
+<li>
+<p><strong>Bố Cục Dòng Chảy (FlowLayout):</strong></p>
+<ul>
+<li>Bố cục dòng chảy sắp xếp các thành phần theo thứ tự từ trái sang phải, dòng này tiếp nối dòng kia.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JButton;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JFrame;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.awt.FlowLayout;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FlowLayoutExample</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        JFrame frame <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JFrame(<span style="color:#e6db74">&#34;FlowLayout Example&#34;</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setLayout</span>(<span style="color:#66d9ef">new</span> FlowLayout());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> JButton(<span style="color:#e6db74">&#34;Button 1&#34;</span>));
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> JButton(<span style="color:#e6db74">&#34;Button 2&#34;</span>));
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> JButton(<span style="color:#e6db74">&#34;Button 3&#34;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setSize</span>(400, 300);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setDefaultCloseOperation</span>(JFrame.<span style="color:#a6e22e">EXIT_ON_CLOSE</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setVisible</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Bố Cục Lưới (GridLayout):</strong></p>
+<ul>
+<li>Bố cục lưới sắp xếp các thành phần thành các ô lưới có số hàng và số cột xác định.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JButton;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.swing.JFrame;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.awt.GridLayout;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GridLayoutExample</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        JFrame frame <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> JFrame(<span style="color:#e6db74">&#34;GridLayout Example&#34;</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setLayout</span>(<span style="color:#66d9ef">new</span> GridLayout(2, 2));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> JButton(<span style="color:#e6db74">&#34;Button 1&#34;</span>));
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> JButton(<span style="color:#e6db74">&#34;Button 2&#34;</span>));
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> JButton(<span style="color:#e6db74">&#34;Button 3&#34;</span>));
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">add</span>(<span style="color:#66d9ef">new</span> JButton(<span style="color:#e6db74">&#34;Button 4&#34;</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setSize</span>(400, 300);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setDefaultCloseOperation</span>(JFrame.<span style="color:#a6e22e">EXIT_ON_CLOSE</span>);
+</span></span><span style="display:flex;"><span>        frame.<span style="color:#a6e22e">setVisible</span>(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="kết-luận">Kết Luận
+</h2><p>Lập trình giao diện người dùng (GUI) trong Java với Swing là một kỹ thuật quan trọng giúp tạo ra các ứng dụng trực quan và thân thiện với người dùng. Bằng cách sử dụng các lớp và phương thức trong thư viện Swing, bạn có thể dễ dàng tạo và quản lý các thành phần giao diện như cửa sổ, nút bấm, nhãn và trường văn bản.</p>
+<p>Hy vọng qua bài viết này, bạn đã có cái nhìn tổng quan về lập trình GUI trong Java và cách áp dụng nó trong thực tế. Nếu bạn có bất kỳ câu hỏi hoặc gặp khó khăn nào, đừng ngần ngại cho tôi biết nhé! 🚀😊 Chúc bạn thành công!</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/gui/">GUI</a>
+        
+            <a href="/tags/swing/">Swing</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/bai-viet-9/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài Viết 9: Lập Trình Mạng Trong Java</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 Duy&#39;s JS Insight
+    </section>
+    
+    <section class="powerby">
+        </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

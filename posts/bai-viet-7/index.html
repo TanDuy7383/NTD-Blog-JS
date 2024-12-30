@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Giới Thiệu\rLàm việc với cơ sở dữ liệu là một phần quan trọng trong phát triển ứng dụng. Java cung cấp một API mạnh mẽ gọi là JDBC (Java Database Connectivity) để kết nối và thao tác với cơ sở dữ liệu. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng JDBC để kết nối với cơ sở dữ liệu, thực hiện các câu lệnh SQL và quản lý dữ liệu.\n">
+<title>Bài Viết 7: Làm Việc Với Cơ Sở Dữ Liệu Trong Java</title>
+
+<link rel='canonical' href='https://example.org/posts/bai-viet-7/'>
+
+<link rel="stylesheet" href="/scss/style.min.6722a184819edd61aaa405bf80a440320700fc796f1bfb31619805b390121542.css"><meta property='og:title' content="Bài Viết 7: Làm Việc Với Cơ Sở Dữ Liệu Trong Java">
+<meta property='og:description' content="Giới Thiệu\rLàm việc với cơ sở dữ liệu là một phần quan trọng trong phát triển ứng dụng. Java cung cấp một API mạnh mẽ gọi là JDBC (Java Database Connectivity) để kết nối và thao tác với cơ sở dữ liệu. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng JDBC để kết nối với cơ sở dữ liệu, thực hiện các câu lệnh SQL và quản lý dữ liệu.\n">
+<meta property='og:url' content='https://example.org/posts/bai-viet-7/'>
+<meta property='og:site_name' content='Duy&#39;s JS Insight'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='Database' /><meta property='article:published_time' content='2024-01-03T00:00:00&#43;07:00'/><meta property='article:modified_time' content='2024-01-03T00:00:00&#43;07:00'/>
+<meta name="twitter:title" content="Bài Viết 7: Làm Việc Với Cơ Sở Dữ Liệu Trong Java">
+<meta name="twitter:description" content="Giới Thiệu\rLàm việc với cơ sở dữ liệu là một phần quan trọng trong phát triển ứng dụng. Java cung cấp một API mạnh mẽ gọi là JDBC (Java Database Connectivity) để kết nối và thao tác với cơ sở dữ liệu. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng JDBC để kết nối với cơ sở dữ liệu, thực hiện các câu lệnh SQL và quản lý dữ liệu.\n">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu15243428473294347562.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Duy&#39;s JS Insight</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/posts/' >
+                
+                
+                
+                <span>Blog</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/bai-viet-7/">Bài Viết 7: Làm Việc Với Cơ Sở Dữ Liệu Trong Java</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 03, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="giới-thiệu">Giới Thiệu
+</h2><p>Làm việc với cơ sở dữ liệu là một phần quan trọng trong phát triển ứng dụng. Java cung cấp một API mạnh mẽ gọi là JDBC (Java Database Connectivity) để kết nối và thao tác với cơ sở dữ liệu. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng JDBC để kết nối với cơ sở dữ liệu, thực hiện các câu lệnh SQL và quản lý dữ liệu.</p>
+<h2 id="cài-đặt-jdbc">Cài Đặt JDBC
+</h2><ol>
+<li>
+<p><strong>Thêm Thư Viện JDBC:</strong></p>
+<ul>
+<li>Để sử dụng JDBC, bạn cần thêm thư viện JDBC của cơ sở dữ liệu bạn đang sử dụng vào dự án của mình. Ví dụ, với MySQL, bạn có thể tải thư viện JDBC từ trang chủ của MySQL.</li>
+</ul>
+</li>
+<li>
+<p><strong>Kết Nối Với Cơ Sở Dữ Liệu:</strong></p>
+<ul>
+<li>Để kết nối với cơ sở dữ liệu, bạn cần tạo một đối tượng <code>Connection</code> và cung cấp thông tin kết nối như URL của cơ sở dữ liệu, tên người dùng và mật khẩu.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.Connection;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.DriverManager;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.SQLException;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DatabaseConnection</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        String url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql://localhost:3306/mydatabase&#34;</span>;
+</span></span><span style="display:flex;"><span>        String user <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+</span></span><span style="display:flex;"><span>        String password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;password&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>            Connection connection <span style="color:#f92672">=</span> DriverManager.<span style="color:#a6e22e">getConnection</span>(url, user, password);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Connected to the database.&#34;</span>);
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (SQLException e) {
+</span></span><span style="display:flex;"><span>            e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="thực-hiện-các-câu-lệnh-sql">Thực Hiện Các Câu Lệnh SQL
+</h2><ol>
+<li>
+<p><strong>Tạo Bảng:</strong></p>
+<ul>
+<li>Bạn có thể sử dụng đối tượng <code>Statement</code> để thực hiện các câu lệnh SQL.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.Connection;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.DriverManager;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.SQLException;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.Statement;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CreateTable</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        String url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql://localhost:3306/mydatabase&#34;</span>;
+</span></span><span style="display:flex;"><span>        String user <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+</span></span><span style="display:flex;"><span>        String password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;password&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> (Connection connection <span style="color:#f92672">=</span> DriverManager.<span style="color:#a6e22e">getConnection</span>(url, user, password);
+</span></span><span style="display:flex;"><span>             Statement statement <span style="color:#f92672">=</span> connection.<span style="color:#a6e22e">createStatement</span>()) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;CREATE TABLE IF NOT EXISTS Users (&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                         <span style="color:#e6db74">&#34;id INT AUTO_INCREMENT PRIMARY KEY,&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                         <span style="color:#e6db74">&#34;name VARCHAR(255),&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                         <span style="color:#e6db74">&#34;email VARCHAR(255)&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                         <span style="color:#e6db74">&#34;)&#34;</span>;
+</span></span><span style="display:flex;"><span>            statement.<span style="color:#a6e22e">executeUpdate</span>(sql);
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Table created successfully.&#34;</span>);
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (SQLException e) {
+</span></span><span style="display:flex;"><span>            e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Chèn Dữ Liệu:</strong></p>
+<ul>
+<li>Bạn có thể sử dụng đối tượng <code>PreparedStatement</code> để chèn dữ liệu vào bảng.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.Connection;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.DriverManager;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.PreparedStatement;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.SQLException;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">InsertData</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        String url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql://localhost:3306/mydatabase&#34;</span>;
+</span></span><span style="display:flex;"><span>        String user <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+</span></span><span style="display:flex;"><span>        String password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;password&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> (Connection connection <span style="color:#f92672">=</span> DriverManager.<span style="color:#a6e22e">getConnection</span>(url, user, password)) {
+</span></span><span style="display:flex;"><span>            String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO Users (name, email) VALUES (?, ?)&#34;</span>;
+</span></span><span style="display:flex;"><span>            PreparedStatement statement <span style="color:#f92672">=</span> connection.<span style="color:#a6e22e">prepareStatement</span>(sql);
+</span></span><span style="display:flex;"><span>            statement.<span style="color:#a6e22e">setString</span>(1, <span style="color:#e6db74">&#34;John Doe&#34;</span>);
+</span></span><span style="display:flex;"><span>            statement.<span style="color:#a6e22e">setString</span>(2, <span style="color:#e6db74">&#34;john.doe@example.com&#34;</span>);
+</span></span><span style="display:flex;"><span>            statement.<span style="color:#a6e22e">executeUpdate</span>();
+</span></span><span style="display:flex;"><span>            System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;Data inserted successfully.&#34;</span>);
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (SQLException e) {
+</span></span><span style="display:flex;"><span>            e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+<li>
+<p><strong>Truy Vấn Dữ Liệu:</strong></p>
+<ul>
+<li>Bạn có thể sử dụng đối tượng <code>ResultSet</code> để truy vấn dữ liệu từ bảng.</li>
+<li>Ví dụ:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.Connection;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.DriverManager;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.ResultSet;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.SQLException;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.Statement;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">QueryData</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String<span style="color:#f92672">[]</span> args) {
+</span></span><span style="display:flex;"><span>        String url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql://localhost:3306/mydatabase&#34;</span>;
+</span></span><span style="display:flex;"><span>        String user <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+</span></span><span style="display:flex;"><span>        String password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;password&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span> (Connection connection <span style="color:#f92672">=</span> DriverManager.<span style="color:#a6e22e">getConnection</span>(url, user, password);
+</span></span><span style="display:flex;"><span>             Statement statement <span style="color:#f92672">=</span> connection.<span style="color:#a6e22e">createStatement</span>()) {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM Users&#34;</span>;
+</span></span><span style="display:flex;"><span>            ResultSet resultSet <span style="color:#f92672">=</span> statement.<span style="color:#a6e22e">executeQuery</span>(sql);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">while</span> (resultSet.<span style="color:#a6e22e">next</span>()) {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> id <span style="color:#f92672">=</span> resultSet.<span style="color:#a6e22e">getInt</span>(<span style="color:#e6db74">&#34;id&#34;</span>);
+</span></span><span style="display:flex;"><span>                String name <span style="color:#f92672">=</span> resultSet.<span style="color:#a6e22e">getString</span>(<span style="color:#e6db74">&#34;name&#34;</span>);
+</span></span><span style="display:flex;"><span>                String email <span style="color:#f92672">=</span> resultSet.<span style="color:#a6e22e">getString</span>(<span style="color:#e6db74">&#34;email&#34;</span>);
+</span></span><span style="display:flex;"><span>                System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>(<span style="color:#e6db74">&#34;ID: &#34;</span> <span style="color:#f92672">+</span> id <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, Name: &#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, Email: &#34;</span> <span style="color:#f92672">+</span> email);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        } <span style="color:#66d9ef">catch</span> (SQLException e) {
+</span></span><span style="display:flex;"><span>            e.<span style="color:#a6e22e">printStackTrace</span>();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
+</ul>
+</li>
+</ol>
+<h2 id="đóng-kết-nối">Đóng Kết Nối
+</h2><ul>
+<li>Sau khi hoàn thành các thao tác với cơ sở dữ liệu, bạn nên đóng kết nối để giải phóng tài nguyên.</li>
+<li>Ví dụ:
+java
+try {
+if (connection != null &amp;&amp; !connection.isClosed()) {
+connection.close();
+}
+} catch (SQLException e) {
+e.printStackTrace();
+}
+<pre tabindex="0"><code></code></pre></li>
+</ul>
+<h2 id="kết-luận">Kết Luận
+</h2><p>Làm việc với cơ sở dữ liệu là một kỹ năng quan trọng trong phát triển ứng dụng Java. Bằng cách sử dụng JDBC, bạn có thể dễ dàng kết nối với cơ sở dữ liệu, thực hiện các câu lệnh SQL và quản lý dữ liệu một cách hiệu quả.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/database/">Database</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/bai-viet-8/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài Viết 8: Lập Trình Giao Diện Người Dùng Trong Java</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/posts/bai-viet-9/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Bài Viết 9: Lập Trình Mạng Trong Java</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2024 Duy&#39;s JS Insight
+    </section>
+    
+    <section class="powerby">
+        </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

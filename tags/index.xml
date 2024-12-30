@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Duy&#39;s JS Insight</title>
+        <link>https://example.org/tags/</link>
+        <description>Recent content in Tags on Duy&#39;s JS Insight</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>vi</language>
+        <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0700</lastBuildDate><atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Java</title>
+        <link>https://example.org/tags/java/</link>
+        <pubDate>Sun, 29 Dec 2024 00:00:00 +0700</pubDate>
+        
+        <guid>https://example.org/tags/java/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>OOP</title>
+        <link>https://example.org/tags/oop/</link>
+        <pubDate>Sat, 30 Nov 2024 00:00:00 +0700</pubDate>
+        
+        <guid>https://example.org/tags/oop/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Exception Handling</title>
+        <link>https://example.org/tags/exception-handling/</link>
+        <pubDate>Tue, 30 Jan 2024 00:00:00 +0700</pubDate>
+        
+        <guid>https://example.org/tags/exception-handling/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Multithreading</title>
+        <link>https://example.org/tags/multithreading/</link>
+        <pubDate>Fri, 05 Jan 2024 00:00:00 +0700</pubDate>
+        
+        <guid>https://example.org/tags/multithreading/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>File Handling</title>
+        <link>https://example.org/tags/file-handling/</link>
+        <pubDate>Thu, 04 Jan 2024 00:00:00 +0700</pubDate>
+        
+        <guid>https://example.org/tags/file-handling/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Database</title>
+        <link>https://example.org/tags/database/</link>
+        <pubDate>Wed, 03 Jan 2024 00:00:00 +0700</pubDate>
+        
+        <guid>https://example.org/tags/database/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GUI</title>
+        <link>https://example.org/tags/gui/</link>
+        <pubDate>Tue, 02 Jan 2024 00:00:00 +0700</pubDate>
+        
+        <guid>https://example.org/tags/gui/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Swing</title>
+        <link>https://example.org/tags/swing/</link>
+        <pubDate>Tue, 02 Jan 2024 00:00:00 +0700</pubDate>
+        
+        <guid>https://example.org/tags/swing/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Networking</title>
+        <link>https://example.org/tags/networking/</link>
+        <pubDate>Mon, 01 Jan 2024 00:00:00 +0700</pubDate>
+        
+        <guid>https://example.org/tags/networking/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
