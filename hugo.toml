@@ -1,0 +1,24 @@
+baseURL = 'https://example.org/'
+languageCode = "vi" 
+title = "Duy's JS Insight" 
+theme = "hugo-theme-stack"
+
+[params]
+    mainSections = ["posts"]
+    
+[menu]
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 3
