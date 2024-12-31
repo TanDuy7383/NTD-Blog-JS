@@ -1,4 +1,4 @@
-baseURL = 'http://localhost:57491/'
+baseURL = 'https://tanduy7383.github.io/NTD-Blog-JS/'
 languageCode = "vi" 
 title = "Duy's JS Insight" 
 theme = "hugo-theme-stack"

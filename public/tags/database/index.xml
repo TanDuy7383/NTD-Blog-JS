@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Database on Duy&#39;s JS Insight</title>
-        <link>http://localhost:57491/tags/database/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/tags/database/</link>
         <description>Recent content in Database on Duy&#39;s JS Insight</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>vi</language>
-        <lastBuildDate>Wed, 03 Jan 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 03 Jan 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/NTD-Blog-JS/tags/database/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Bài Viết 7: Làm Việc Với Cơ Sở Dữ Liệu Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-7/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-7/</link>
         <pubDate>Wed, 03 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-7/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-7/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Làm việc với cơ sở dữ liệu là một phần quan trọng trong phát triển ứng dụng. Java cung cấp một API mạnh mẽ gọi là JDBC (Java Database Connectivity) để kết nối và thao tác với cơ sở dữ liệu. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng JDBC để kết nối với cơ sở dữ liệu, thực hiện các câu lệnh SQL và quản lý dữ liệu.&lt;/p&gt;
 &lt;h2 id=&#34;cài-đặt-jdbc&#34;&gt;Cài Đặt JDBC

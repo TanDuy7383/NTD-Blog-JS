@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>OOP on Duy&#39;s JS Insight</title>
-        <link>http://localhost:57491/tags/oop/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/tags/oop/</link>
         <description>Recent content in OOP on Duy&#39;s JS Insight</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>vi</language>
-        <lastBuildDate>Sat, 30 Nov 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/tags/oop/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 30 Nov 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/NTD-Blog-JS/tags/oop/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Bài Viết 3: Lập Trình Hướng Đối Tượng Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-3/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-3/</link>
         <pubDate>Sat, 30 Nov 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-3/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-3/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Lập trình hướng đối tượng (Object-Oriented Programming - OOP) là một trong những phương pháp lập trình phổ biến nhất hiện nay. Trong Java, OOP giúp tổ chức và quản lý mã nguồn một cách hiệu quả thông qua việc sử dụng các đối tượng và lớp. Trong bài viết này, chúng ta sẽ tìm hiểu về các khái niệm cơ bản của OOP trong Java.&lt;/p&gt;
 &lt;h2 id=&#34;các-khái-niệm-cơ-bản-của-oop&#34;&gt;Các Khái Niệm Cơ Bản Của OOP

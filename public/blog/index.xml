@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Blog on Duy&#39;s JS Insight</title>
-        <link>http://localhost:57491/blog/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/blog/</link>
         <description>Recent content in Blog on Duy&#39;s JS Insight</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>vi</language>
-        <lastBuildDate></lastBuildDate><atom:link href="http://localhost:57491/blog/index.xml" rel="self" type="application/rss+xml" />
+        <lastBuildDate></lastBuildDate><atom:link href="http://localhost:57491/NTD-Blog-JS/blog/index.xml" rel="self" type="application/rss+xml" />
     </channel>
 </rss>

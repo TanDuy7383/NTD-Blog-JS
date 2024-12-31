@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Networking on Duy&#39;s JS Insight</title>
-        <link>http://localhost:57491/tags/networking/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/tags/networking/</link>
         <description>Recent content in Networking on Duy&#39;s JS Insight</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>vi</language>
-        <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/tags/networking/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/NTD-Blog-JS/tags/networking/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Bài Viết 9: Lập Trình Mạng Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-9/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-9/</link>
         <pubDate>Mon, 01 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-9/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-9/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Lập trình mạng (Networking) là một kỹ thuật quan trọng trong lập trình, cho phép các ứng dụng giao tiếp với nhau qua mạng. Trong Java, thư viện &lt;code&gt;java.net&lt;/code&gt; cung cấp các lớp và giao diện hỗ trợ lập trình mạng. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng các lớp này để tạo các ứng dụng mạng, bao gồm tạo server và client.&lt;/p&gt;
 &lt;h2 id=&#34;tạo-server-đơn-giản&#34;&gt;Tạo Server Đơn Giản

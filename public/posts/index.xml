@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Duy&#39;s JS Insight</title>
-        <link>http://localhost:57491/posts/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/</link>
         <description>Recent content in Posts on Duy&#39;s JS Insight</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>vi</language>
-        <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/NTD-Blog-JS/posts/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Bài Viết 1: Cơ Bản Về Java</title>
-        <link>http://localhost:57491/posts/bai-viet-1/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-1/</link>
         <pubDate>Sun, 29 Dec 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-1/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-1/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Java là một ngôn ngữ lập trình mạnh mẽ và phổ biến, được phát triển bởi Sun Microsystems và hiện nay thuộc về Oracle. Java được thiết kế để viết một lần và chạy ở mọi nơi (write once, run anywhere), có nghĩa là mã Java có thể chạy trên bất kỳ nền tảng nào có hỗ trợ máy ảo Java (JVM).&lt;/p&gt;
 &lt;h2 id=&#34;cài-đặt-môi-trường-phát-triển&#34;&gt;Cài Đặt Môi Trường Phát Triển
@@ -88,10 +88,10 @@ Các vòng lặp như &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;while&lt;/code&g
         </item>
         <item>
         <title>Bài Viết 2: Các Kiểu Dữ Liệu Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-2/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-2/</link>
         <pubDate>Sat, 30 Nov 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-2/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-2/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Trong Java, kiểu dữ liệu rất quan trọng vì chúng xác định loại dữ liệu mà một biến có thể chứa và các thao tác có thể thực hiện trên dữ liệu đó. Java có các kiểu dữ liệu nguyên thủy và kiểu dữ liệu đối tượng. Trong bài viết này, chúng ta sẽ tìm hiểu về các kiểu dữ liệu cơ bản trong Java và cách sử dụng chúng.&lt;/p&gt;
 &lt;h2 id=&#34;các-kiểu-dữ-liệu-nguyên-thủy&#34;&gt;Các Kiểu Dữ Liệu Nguyên Thủy
@@ -214,10 +214,10 @@ Các vòng lặp như &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;while&lt;/code&g
         </item>
         <item>
         <title>Bài Viết 3: Lập Trình Hướng Đối Tượng Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-3/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-3/</link>
         <pubDate>Sat, 30 Nov 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-3/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-3/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Lập trình hướng đối tượng (Object-Oriented Programming - OOP) là một trong những phương pháp lập trình phổ biến nhất hiện nay. Trong Java, OOP giúp tổ chức và quản lý mã nguồn một cách hiệu quả thông qua việc sử dụng các đối tượng và lớp. Trong bài viết này, chúng ta sẽ tìm hiểu về các khái niệm cơ bản của OOP trong Java.&lt;/p&gt;
 &lt;h2 id=&#34;các-khái-niệm-cơ-bản-của-oop&#34;&gt;Các Khái Niệm Cơ Bản Của OOP
@@ -395,10 +395,10 @@ Các vòng lặp như &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;while&lt;/code&g
         </item>
         <item>
         <title>Bài Viết 4: Xử Lý Ngoại Lệ Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-4/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-4/</link>
         <pubDate>Tue, 30 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-4/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-4/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Xử lý ngoại lệ (Exception Handling) là một phần quan trọng của lập trình trong Java. Ngoại lệ là các sự cố xảy ra trong quá trình thực thi chương trình, khiến chương trình không thể tiếp tục chạy. Trong bài viết này, chúng ta sẽ tìm hiểu cách xử lý ngoại lệ trong Java và cách sử dụng các khối &lt;code&gt;try&lt;/code&gt;, &lt;code&gt;catch&lt;/code&gt;, &lt;code&gt;finally&lt;/code&gt; để quản lý ngoại lệ một cách hiệu quả.&lt;/p&gt;
 &lt;h2 id=&#34;các-loại-ngoại-lệ-trong-java&#34;&gt;Các Loại Ngoại Lệ Trong Java
@@ -515,10 +515,10 @@ Các vòng lặp như &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;while&lt;/code&g
         </item>
         <item>
         <title>Bài Viết 5: Lập Trình Đa Luồng Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-5/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-5/</link>
         <pubDate>Fri, 05 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-5/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-5/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Lập trình đa luồng (Multithreading) là một khái niệm quan trọng trong Java cho phép thực thi nhiều luồng đồng thời trong một chương trình. Đa luồng giúp tối ưu hóa hiệu suất và tăng cường khả năng phản hồi của ứng dụng. Trong bài viết này, chúng ta sẽ tìm hiểu về lập trình đa luồng trong Java và cách sử dụng các lớp và phương thức liên quan để quản lý luồng.&lt;/p&gt;
 &lt;h2 id=&#34;các-khái-niệm-cơ-bản-về-đa-luồng&#34;&gt;Các Khái Niệm Cơ Bản Về Đa Luồng
@@ -757,10 +757,10 @@ Các vòng lặp như &lt;code&gt;for&lt;/code&gt;, &lt;code&gt;while&lt;/code&g
         </item>
         <item>
         <title>Bài Viết 6: Xử Lý File Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-6/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-6/</link>
         <pubDate>Thu, 04 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-6/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-6/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Xử lý file (File Handling) là một kỹ thuật quan trọng trong lập trình, cho phép bạn đọc và ghi dữ liệu từ và đến các file trên hệ thống. Trong Java, có nhiều lớp và phương thức hỗ trợ xử lý file, bao gồm &lt;code&gt;File&lt;/code&gt;, &lt;code&gt;FileReader&lt;/code&gt;, &lt;code&gt;FileWriter&lt;/code&gt;, &lt;code&gt;BufferedReader&lt;/code&gt;, và &lt;code&gt;BufferedWriter&lt;/code&gt;. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng các lớp này để xử lý file trong Java.&lt;/p&gt;
 &lt;h2 id=&#34;đọc-file-trong-java&#34;&gt;Đọc File Trong Java
@@ -915,10 +915,10 @@ Xử lý file là một phần quan trọng trong lập trình Java, cho phép b
         </item>
         <item>
         <title>Bài Viết 7: Làm Việc Với Cơ Sở Dữ Liệu Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-7/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-7/</link>
         <pubDate>Wed, 03 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-7/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-7/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Làm việc với cơ sở dữ liệu là một phần quan trọng trong phát triển ứng dụng. Java cung cấp một API mạnh mẽ gọi là JDBC (Java Database Connectivity) để kết nối và thao tác với cơ sở dữ liệu. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng JDBC để kết nối với cơ sở dữ liệu, thực hiện các câu lệnh SQL và quản lý dữ liệu.&lt;/p&gt;
 &lt;h2 id=&#34;cài-đặt-jdbc&#34;&gt;Cài Đặt JDBC
@@ -1081,10 +1081,10 @@ e.printStackTrace();
         </item>
         <item>
         <title>Bài Viết 8: Lập Trình Giao Diện Người Dùng Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-8/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-8/</link>
         <pubDate>Tue, 02 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-8/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-8/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Lập trình giao diện người dùng (GUI) là một phần quan trọng trong phát triển ứng dụng giúp tương tác giữa người dùng và chương trình trở nên trực quan hơn. Trong Java, thư viện Swing cung cấp một bộ công cụ mạnh mẽ để tạo giao diện người dùng. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng Swing để tạo các thành phần giao diện cơ bản.&lt;/p&gt;
 &lt;h2 id=&#34;tạo-cửa-sổ-đơn-giản&#34;&gt;Tạo Cửa Sổ Đơn Giản
@@ -1270,10 +1270,10 @@ e.printStackTrace();
         </item>
         <item>
         <title>Bài Viết 9: Lập Trình Mạng Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-9/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-9/</link>
         <pubDate>Mon, 01 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-9/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-9/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Lập trình mạng (Networking) là một kỹ thuật quan trọng trong lập trình, cho phép các ứng dụng giao tiếp với nhau qua mạng. Trong Java, thư viện &lt;code&gt;java.net&lt;/code&gt; cung cấp các lớp và giao diện hỗ trợ lập trình mạng. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng các lớp này để tạo các ứng dụng mạng, bao gồm tạo server và client.&lt;/p&gt;
 &lt;h2 id=&#34;tạo-server-đơn-giản&#34;&gt;Tạo Server Đơn Giản

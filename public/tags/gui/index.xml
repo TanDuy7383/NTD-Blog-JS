@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>GUI on Duy&#39;s JS Insight</title>
-        <link>http://localhost:57491/tags/gui/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/tags/gui/</link>
         <description>Recent content in GUI on Duy&#39;s JS Insight</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>vi</language>
-        <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/tags/gui/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 02 Jan 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/NTD-Blog-JS/tags/gui/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Bài Viết 8: Lập Trình Giao Diện Người Dùng Trong Java</title>
-        <link>http://localhost:57491/posts/bai-viet-8/</link>
+        <link>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-8/</link>
         <pubDate>Tue, 02 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:57491/posts/bai-viet-8/</guid>
+        <guid>http://localhost:57491/NTD-Blog-JS/posts/bai-viet-8/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Lập trình giao diện người dùng (GUI) là một phần quan trọng trong phát triển ứng dụng giúp tương tác giữa người dùng và chương trình trở nên trực quan hơn. Trong Java, thư viện Swing cung cấp một bộ công cụ mạnh mẽ để tạo giao diện người dùng. Trong bài viết này, chúng ta sẽ tìm hiểu cách sử dụng Swing để tạo các thành phần giao diện cơ bản.&lt;/p&gt;
 &lt;h2 id=&#34;tạo-cửa-sổ-đơn-giản&#34;&gt;Tạo Cửa Sổ Đơn Giản
