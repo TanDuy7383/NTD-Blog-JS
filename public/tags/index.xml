@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on Duy&#39;s JS Insight</title>
-        <link>http://localhost:1313/tags/</link>
+        <link>http://localhost:57491/tags/</link>
         <description>Recent content in Tags on Duy&#39;s JS Insight</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>vi</language>
-        <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 29 Dec 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Java</title>
-        <link>http://localhost:1313/tags/java/</link>
+        <link>http://localhost:57491/tags/java/</link>
         <pubDate>Sun, 29 Dec 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:1313/tags/java/</guid>
+        <guid>http://localhost:57491/tags/java/</guid>
         <description></description>
         </item>
         <item>
         <title>OOP</title>
-        <link>http://localhost:1313/tags/oop/</link>
+        <link>http://localhost:57491/tags/oop/</link>
         <pubDate>Sat, 30 Nov 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:1313/tags/oop/</guid>
+        <guid>http://localhost:57491/tags/oop/</guid>
         <description></description>
         </item>
         <item>
         <title>Exception Handling</title>
-        <link>http://localhost:1313/tags/exception-handling/</link>
+        <link>http://localhost:57491/tags/exception-handling/</link>
         <pubDate>Tue, 30 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:1313/tags/exception-handling/</guid>
+        <guid>http://localhost:57491/tags/exception-handling/</guid>
         <description></description>
         </item>
         <item>
         <title>Multithreading</title>
-        <link>http://localhost:1313/tags/multithreading/</link>
+        <link>http://localhost:57491/tags/multithreading/</link>
         <pubDate>Fri, 05 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:1313/tags/multithreading/</guid>
+        <guid>http://localhost:57491/tags/multithreading/</guid>
         <description></description>
         </item>
         <item>
         <title>File Handling</title>
-        <link>http://localhost:1313/tags/file-handling/</link>
+        <link>http://localhost:57491/tags/file-handling/</link>
         <pubDate>Thu, 04 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:1313/tags/file-handling/</guid>
+        <guid>http://localhost:57491/tags/file-handling/</guid>
         <description></description>
         </item>
         <item>
         <title>Database</title>
-        <link>http://localhost:1313/tags/database/</link>
+        <link>http://localhost:57491/tags/database/</link>
         <pubDate>Wed, 03 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:1313/tags/database/</guid>
+        <guid>http://localhost:57491/tags/database/</guid>
         <description></description>
         </item>
         <item>
         <title>GUI</title>
-        <link>http://localhost:1313/tags/gui/</link>
+        <link>http://localhost:57491/tags/gui/</link>
         <pubDate>Tue, 02 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:1313/tags/gui/</guid>
+        <guid>http://localhost:57491/tags/gui/</guid>
         <description></description>
         </item>
         <item>
         <title>Swing</title>
-        <link>http://localhost:1313/tags/swing/</link>
+        <link>http://localhost:57491/tags/swing/</link>
         <pubDate>Tue, 02 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:1313/tags/swing/</guid>
+        <guid>http://localhost:57491/tags/swing/</guid>
         <description></description>
         </item>
         <item>
         <title>Networking</title>
-        <link>http://localhost:1313/tags/networking/</link>
+        <link>http://localhost:57491/tags/networking/</link>
         <pubDate>Mon, 01 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:1313/tags/networking/</guid>
+        <guid>http://localhost:57491/tags/networking/</guid>
         <description></description>
         </item>
         

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Multithreading on Duy&#39;s JS Insight</title>
-        <link>http://localhost:1313/tags/multithreading/</link>
+        <link>http://localhost:57491/tags/multithreading/</link>
         <description>Recent content in Multithreading on Duy&#39;s JS Insight</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>vi</language>
-        <lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:1313/tags/multithreading/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0700</lastBuildDate><atom:link href="http://localhost:57491/tags/multithreading/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Bài Viết 5: Lập Trình Đa Luồng Trong Java</title>
-        <link>http://localhost:1313/posts/bai-viet-5/</link>
+        <link>http://localhost:57491/posts/bai-viet-5/</link>
         <pubDate>Fri, 05 Jan 2024 00:00:00 +0700</pubDate>
         
-        <guid>http://localhost:1313/posts/bai-viet-5/</guid>
+        <guid>http://localhost:57491/posts/bai-viet-5/</guid>
         <description>&lt;h2 id=&#34;giới-thiệu&#34;&gt;Giới Thiệu
 &lt;/h2&gt;&lt;p&gt;Lập trình đa luồng (Multithreading) là một khái niệm quan trọng trong Java cho phép thực thi nhiều luồng đồng thời trong một chương trình. Đa luồng giúp tối ưu hóa hiệu suất và tăng cường khả năng phản hồi của ứng dụng. Trong bài viết này, chúng ta sẽ tìm hiểu về lập trình đa luồng trong Java và cách sử dụng các lớp và phương thức liên quan để quản lý luồng.&lt;/p&gt;
 &lt;h2 id=&#34;các-khái-niệm-cơ-bản-về-đa-luồng&#34;&gt;Các Khái Niệm Cơ Bản Về Đa Luồng

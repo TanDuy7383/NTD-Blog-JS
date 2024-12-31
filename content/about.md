@@ -4,8 +4,32 @@ date: 2024-12-29T00:00:00+07:00
 draft: false
 ---
 
-Xin chào, tôi tên là Nguyễn Tấn Duy, năm nay 22 tuổi. Hiện tại, tôi đang theo học chuyên ngành Công nghệ Thông tin với trọng tâm là Mạng Máy Tính tại trường Đại học Công nghệ TP.HCM (Hutech). Với niềm đam mê mãnh liệt trong lĩnh vực công nghệ, tôi luôn không ngừng học hỏi và phát triển kỹ năng của mình trong việc thiết kế, triển khai và quản lý các hệ thống mạng.
+### **Giới thiệu bản thân**
+Xin chào! Tôi là **Nguyễn Tấn Duy**, một người đam mê lập trình và công nghệ. Hiện tại, tôi đang là sinh viên năm **4** tại **Đại học Công nghệ TP.HCM (Hutech)**, chuyên ngành **Công nghệ thông tin, chuyên ngành Mạng máy tính**. Tôi luôn tìm tòi và học hỏi những kiến thức mới để nâng cao kỹ năng và phát triển sự nghiệp trong lĩnh vực công nghệ thông tin.
 
-Trong quá trình học tập, tôi đã được trang bị kiến thức vững vàng về mạng máy tính, bảo mật thông tin và các công nghệ hiện đại khác. Ngoài ra, tôi còn tích cực tham gia các hoạt động ngoại khóa và các dự án nghiên cứu để có thể áp dụng lý thuyết vào thực tiễn, nhằm nâng cao kỹ năng và kinh nghiệm của mình.
+---
 
-Tôi luôn khao khát đóng góp sức lực của mình vào việc phát triển các giải pháp công nghệ tiên tiến, góp phần mang lại sự tiến bộ và an toàn cho cộng đồng mạng. Với tinh thần ham học hỏi và sự nhiệt huyết, tôi tin rằng mình sẽ có thể đạt được những thành tựu đáng kể trong tương lai.
+### **Kinh nghiệm**
+- **Dự án cá nhân**: Tôi đã tự xây dựng một số ứng dụng nhỏ như quản lý thư viện sách, ứng dụng ghi chú cá nhân, và trang blog chia sẻ kiến thức lập trình.
+- **Tham gia các khóa học**: Tôi đã hoàn thành các khóa học về lập trình Java, JavaScript, và các công nghệ liên quan trên các nền tảng như Coursera, Udemy, và freeCodeCamp.
+
+---
+
+### **Sở thích**
+- **Lập trình**: Tôi thích viết code và giải quyết các bài toán lập trình. Java và JavaScript là hai ngôn ngữ tôi yêu thích nhất.
+- **Đọc sách**: Tôi thường đọc sách về công nghệ, lập trình và phát triển bản thân để mở rộng kiến thức.
+- **Nghe nhạc**: Âm nhạc giúp tôi thư giãn và tập trung hơn khi làm việc.
+- **Đi chơi**: Tôi thích khám phá những địa điểm mới và trải nghiệm cuộc sống.
+
+---
+
+### **Mục tiêu nghề nghiệp**
+- **Ngắn hạn**: Hoàn thành tốt chương trình học và tích lũy thêm kinh nghiệm thực tế thông qua các dự án cá nhân và thực tập.
+- **Dài hạn**: Trở thành một chuyên gia về mạng máy tính, có thể thiết kế, triển khai và bảo mật các hệ thống mạng cho doanh nghiệp và tổ chức. Tôi cũng mong muốn đóng góp vào sự phát triển của các công nghệ mạng tiên tiến như IoT, Cloud Computing và 5G.
+
+---
+
+### **Liên hệ**
+- **Email**: [ntduy7823@gmail.com](mailto:ntduy7823@gmail.com)
+- **GitHub**: [TanDuy7383](https://github.com/TanDuy7383)
+- **Facebook**: [Nguyễn Tấn Duy](https://www.facebook.com/nguyen.tan.duy.330440/)

@@ -1,9 +1,11 @@
-baseURL = 'https://example.org/'
+baseURL = 'http://localhost:57491/'
 languageCode = "vi" 
 title = "Duy's JS Insight" 
 theme = "hugo-theme-stack"
 
 [params]
+      assetsDir = "assets"
+
     mainSections = ["posts"]
     
 [menu]
